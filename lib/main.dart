@@ -1,15 +1,32 @@
 import 'dart:io';
 
+num number1, number2;
+
+topla(number1, number2) {
+  print(number1 + number2);
+}
+
+cikar(num number1, num number2) {
+  print(number1 - number2);
+}
+
+carp(num number1, num number2) {
+  print(number1 * number2);
+}
+
+bol(num number1, num number2) {
+  print(number1 / number2);
+}
+
 main() {
-  var option, calculation;
-  double number1, number2;
+  int option;
 
-  print("Toplama işlemi için 1 e basın");
-  print("Çıkarma işlemi için 2 e basın");
-  print("Çarpma işlemi için 3 e basın");
-  print("Bölme işlemi için 4 e basın");
+  print("Toplama işlemi -> 1");
+  print("Çıkarma işlemi -> 2");
+  print("Çarpma işlemi -> 3");
+  print("Bölme işlemi -> 4");
 
-  print("Hangi işlemi yapmak istiyorsunuz?");
+  print("Hangi işlemi yapmak istiyorsunuz? ");
   option = int.parse(stdin.readLineSync());
 
   print("Birinci sayı: ");
@@ -20,36 +37,17 @@ main() {
 
   switch (option) {
     case 1:
-      calculation = number1 + number2;
-      print("Toplamı: $calculation");
+      topla(number1, number2);
       break;
     case 2:
-      calculation = number1 - number2;
-      print("Farkı: $calculation");
+      cikar(number1, number2);
       break;
     case 3:
-      calculation = number1 * number2;
-      print("Çarpımı: $calculation");
+      carp(number1, number2);
       break;
     case 4:
-      calculation = number1 / number2;
-      print("Bölümü: $calculation");
+      bol(number1, number2);
       break;
     default:
   }
-/*
-  if (option == 1) {
-    calculation = number1 + number2;
-    print(calculation);
-  } else if (option == 2) {
-    calculation = number1 - number2;
-    print(calculation);
-  } else if (option == 3) {
-    calculation = number1 * number2;
-    print(calculation);
-  } else {
-    calculation = number1 / number2;
-    print(calculation);
-  }
-*/
 }
